@@ -7,10 +7,10 @@
 .node {
   height: 20px;
   width: 20px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
   background-color: black;
   position: absolute;
-  /* cursor: pointer; */
+  cursor: pointer;
   z-index: 2;
 }
 
