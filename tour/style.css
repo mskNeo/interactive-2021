@@ -11,6 +11,7 @@
   background-color: cornflowerblue;
   position: absolute;
   cursor: pointer;
+  z-index: 2;
 }
 
 .modal {
@@ -42,4 +43,9 @@
 
 .img-open {
   transform: translate(-50%, -50%) scale(1);
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
 }
