@@ -20,20 +20,25 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@-webkit-keyframes backgroundChange {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes backgroundChange {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
 @keyframes backgroundChange {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
+}
+
+@keyframes wave {
+  0%{
+      transform: translateY(0px);
+      background-position: 0% 50%
+  }
+  50%{
+      transform: translateY(-50px);
+      background-position:100% 50%;
+  }
+  100%{
+      transform: translateY(0px);
+      background-position:0% 50%;
+  }
 }
 
 h1 {
@@ -46,6 +51,20 @@ h1 {
   -webkit-animation: backgroundChange 10s ease infinite;
   -moz-animation: backgroundChange 10s ease infinite;
   animation: backgroundChange 10s ease infinite;
+  margin-top: 25vh;
+}
+
+span {
+  background: linear-gradient(270deg, #ec1c88, #67ec1c, #f3ef7d, #ecc31c, #1cecc0);
+  background-size: 1000% 1000%;
+  display: inline-block;
+  -webkit-animation: wave 3s ease-in-out infinite;
+  -moz-animation: wave 3s ease-in-out infinite;
+  animation: wave 3s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+  padding: 0 20px;
+  border-radius: 50%;
+  color: black;
 }
 
 li {
@@ -69,8 +88,8 @@ li:nth-child(2){
 }
 
 li:nth-child(3){
-  top: 50vh;
-  left: 48vw;
+  top: 65vh;
+  left: 72vw;
 }
 
 li:nth-child(4){
