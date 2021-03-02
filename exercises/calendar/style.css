@@ -36,12 +36,15 @@
 .days {
   margin: -1px 0px 0px 0px;
   height: 60vh;
-  display: grid;
-  grid-template-columns: repeat(7, 216.5px);
-  grid-template-rows: 2.5em auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content:flex-start
 }
 
 .weekday, .day {
+  width: 216.5px;
+  height: 124px;
   padding: 10px;
   background-color: ghostwhite;
   border: 1px solid black;
@@ -52,4 +55,5 @@
 
 .weekday {
   text-align: center;
+  height: 2.5em;
 }
