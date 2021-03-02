@@ -37,7 +37,7 @@
   margin: -1px 0px 0px 0px;
   height: 60vh;
   display: grid;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(7, 216.5px);
   grid-template-rows: 2.5em auto;
 }
 
