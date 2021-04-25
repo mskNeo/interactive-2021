@@ -18,6 +18,15 @@
   }
 }
 
+@keyframes move_across {
+  0% {
+    left: 30px;
+  }
+  100% {
+    left: calc(100vw - 90px);
+  }
+}
+
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
@@ -48,7 +57,7 @@ h1 {
   display: flex;
   flex-flow: row;
   position: relative;
-  animation: float 2s linear infinite;
+  animation: float 2s linear infinite, move_across infinite linear;
 }
 
 .cloud1 {
@@ -59,7 +68,7 @@ h1 {
 
 .cloud2 {
   top: 150px;
-  left: 10px;
+  left: 30px;
   animation-delay: 0.3s;
 }
 
