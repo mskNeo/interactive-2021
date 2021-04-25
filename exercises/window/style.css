@@ -1,0 +1,261 @@
+/* CSS files add styling rules to your content */
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(1px, 0px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(-1px, 0px);
+  }
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.window {
+  width: 100%;
+  height: 92vh;
+  display: inline-block;
+  background: skyblue;
+  box-shadow: inset 0 2px 10px black;
+}
+
+.clouds {
+  position: fixed;
+  width: 100%;
+  height: 50%;
+}
+
+.cloud {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  animation: float 2s linear infinite;
+}
+
+.cloud1 {
+  top: 100px;
+  left: 30px;
+  animation-delay: -0.3s;
+}
+
+.cloud2 {
+  top: 150px;
+  left: 10px;
+  animation-delay: 0.3s;
+}
+
+.cloud > * {
+  background: white;
+}
+
+.cp1, .cp2, .cp3, .cp4{
+  border-radius: 50%;
+}
+
+.cloud1 .cp1 {
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+}
+
+.cloud1 .cp2 {
+  height: 80px;
+  width: 90px;
+  margin-left: -30px;
+}
+
+.cloud1 .cp3 {
+  height: 105px;
+  width: 100px;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.cloud1 .cp4 {
+  height: 70px;
+  width: 80px;
+  margin-left: -30px;
+  margin-top: 0px;
+}
+
+.cloud2 .cp1 {
+  height: 70px;
+  width: 90px;
+  margin-top: 10px;
+}
+
+.cloud2 .cp2 {
+  height: 125px;
+  width: 110px;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.cloud2 .cp3 {
+  height: 95px;
+  width: 100px;
+  margin-left: -40px;
+  margin-top: -20px;
+}
+
+.cloud2 .cp4 {
+  height: 50px;
+  width: 60px;
+  margin-left: -30px;
+  margin-top: 20px;
+}
+
+.building {
+  position: fixed;
+  width: 96.5%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  top: 47%;
+}
+
+.bd {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.bd1::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: #7c3b1a;
+  background:
+  linear-gradient(115deg, transparent 75%, rgba(255, 255, 255,.8) 75%) 0 0,
+  linear-gradient(245deg, transparent 75%, rgba(209, 144, 112,.8) 75%) 0 0,
+  linear-gradient(115deg, transparent 75%, rgba(255, 255, 255,.8) 75%) 7px -15px,
+  linear-gradient(245deg, transparent 75%, rgba(209, 144, 112,.8) 75%) 7px -15px,
+  #7c3b1a;
+  background-size: 15px 30px;
+  transform: rotate(30deg);
+}
+
+.bd2::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: #7c3b1a;
+  background:
+  linear-gradient(115deg, transparent 75%, rgba(209, 144, 112,.8) 75%) 0 0,
+  linear-gradient(245deg, transparent 75%, rgba(255, 255, 255,.8) 75%) 0 0,
+  linear-gradient(115deg, transparent 75%, rgba(209, 144, 112,.8) 75%) 7px -15px,
+  linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+  #7c3b1a;
+  background-size: 15px 30px;
+  transform: rotate(-30deg);
+}
+
+.bd1 {
+  clip-path: polygon(0 37%, 100% 27%, 100% 100%, 0% 100%);
+}
+
+.bd2 {
+  clip-path: polygon(0 27%, 100% 33%, 100% 100%, 0% 100%);
+}
+
+.bdWindow {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background: black;
+}
+
+.bdw1 {
+  top: 20%;
+  left: 20%;
+  clip-path: polygon(0 42%, 100% 37%, 100% 100%, 0% 100%);
+}
+
+.bdw2 {
+  clip-path: polygon(0 37%, 100% 40%, 100% 100%, 0% 100%);
+  top: 20%;
+  left: 30%;
+}
+
+.glass {
+  width: 90%;
+  background: grey;
+  height: 100%;
+}
+
+.left {
+  position: relative;
+  clip-path: polygon(0 42%, 100% 38%, 100% 100%, 0% 100%);
+  left: 10%;
+  top: 5%;
+}
+
+.right {
+  position: relative;
+  clip-path: polygon(0 37%, 100% 40%, 100% 100%, 0% 100%);
+  top: 5%;
+}
+
+.reflection {
+  position: relative;
+  border-top: 100px solid white;
+  border-left: 50px solid transparent;
+  opacity: 0.8;
+}
+
+.windowframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
+  border: 50px solid rgb(20, 15, 12);
+}
+
+.vert {
+  position: fixed;
+  top: 0;
+  left: calc(50vw - 25px);
+  width: 50px;
+  height: 100vh;
+  background: rgb(20, 15, 12);
+  z-index: 5;
+}
+
+.horiz {
+  position: fixed;
+  left: 0;
+  top: calc(50vh - 25px);
+  height: 50px;
+  width: 100vw;
+  background: rgb(20, 15, 12);
+  z-index: 7;
+}
+
