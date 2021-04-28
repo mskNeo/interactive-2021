@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes sec {
+  from {
+    transform: scale(0);
+  } to {
+    transform: scale(1);
+  }
+}
+
+.clock {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 5;
+  transition: all 300ms ease;
+}
+
+.min {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 4;
+  transition: all 300ms ease;
+}
+
+.hr {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 3;
+  transition: all 300ms ease;
+}
